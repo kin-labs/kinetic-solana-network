@@ -15,7 +15,7 @@ EOF
 
 
 retry () {
-  while ! $@; do
+  while ! "$@"; do
     sleep 1
   done
 }
@@ -24,7 +24,7 @@ retry () {
 retry solana airdrop 10
 
 # Create a new SPL token
-token=$(spl-token create-token -- mint.json | grep 'Creating token' | awk '{ print $3 }')
+token=$(spl-token create-token ./mint.json --decimals 5 --fee-payer ./owner.json --mint-authority ./owner.json  | grep 'Creating token' | awk '{ print $3 }')
 echo "Created token $token"
 
 # Create token account
@@ -32,7 +32,6 @@ account=$(spl-token create-account "$token" | grep 'Creating account' | awk '{ p
 echo "Created token account $account"
 
 # Mint new tokens owned by our CLI account
-spl-token mint "$token" 10000000000 "$account"
+spl-token mint "$token" 10000000000000 "$account"
 
-# Let k8s startup probe succeed
 sleep infinity
