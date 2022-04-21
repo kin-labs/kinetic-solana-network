@@ -8,6 +8,10 @@ COPY owner.json .
 
 COPY mint.json .
 
+COPY alice.json .
+
+COPY bob.json .
+
 COPY setup-localnet.sh .
 
 ENTRYPOINT ./setup-localnet.sh
