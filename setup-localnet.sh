@@ -34,16 +34,24 @@ echo "Created token account $account"
 # Mint new tokens owned by our CLI account
 spl-token mint "$token" 10000000000000 "$account"
 
-# Create token alice account
+# Create alice token account
 account1=$(spl-token create-account "$token" --owner ./alice.json --fee-payer ./owner.json | grep 'Creating account' | awk '{ print $3 }')
-echo "Created token account $account1"
+echo "Created token account alice $account1"
 
 # Airdrop alice tokens
 transfer=$(spl-token transfer "$token" 100000 "$account1" --fee-payer ./owner.json --owner ./owner.json)
 echo "Airdrop 100000 to Alice $transfer"
 
-# Create token alice account
+# Create bob token account
 account2=$(spl-token create-account "$token" --owner ./bob.json --fee-payer ./owner.json | grep 'Creating account' | awk '{ print $3 }')
-echo "Created token account $account2"
+echo "Created token account bob $account2"
+
+# Create charlie token account
+account3=$(spl-token create-account "$token" --owner ./charlie.json --fee-payer ./owner.json | grep 'Creating account' | awk '{ print $3 }')
+echo "Created token account charlie $account3"
+
+# Create dave token account
+account4=$(spl-token create-account "$token" --owner ./dave.json --fee-payer ./owner.json | grep 'Creating account' | awk '{ print $3 }')
+echo "Created token account dave $account4"
 
 sleep infinity

@@ -4,13 +4,7 @@ LABEL org.opencontainers.image.source = https://github.com/kin-labs/mogami-solan
 
 EXPOSE 8899 8900
 
-COPY owner.json .
-
-COPY mint.json .
-
-COPY alice.json .
-
-COPY bob.json .
+COPY keys/* .
 
 COPY setup-localnet.sh .
 
