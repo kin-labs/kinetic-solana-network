@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker:build": "docker build . -t ghcr.io/kin-labs/mogami-solana-network",
     "docker:push": "docker push ghcr.io/kin-labs/mogami-solana-network",
-    "docker:run": "docker run -it -p 8899:8899 -p 8900:8900 --name mogami-solana-network ghcr.io/kin-labs/mogami-solana-network",
+    "docker:run": "docker run --rm -it -p 8899:8899 -p 8900:8900 --name mogami-solana-network ghcr.io/kin-labs/mogami-solana-network",
     "docker:run-sh": "docker run -it --name mogami-solana-network-sh --entrypoint bash ghcr.io/kin-labs/mogami-solana-network"
   },
   "repository": {
