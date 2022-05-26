@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script configures the devnet for test transfers with hardcoded addresses.
 set -x
+set -m
 
 solana-test-validator &
 
@@ -54,4 +55,4 @@ echo "Created token account charlie $account3"
 account4=$(spl-token create-account "$token" --owner ./dave.json --fee-payer ./owner.json | grep 'Creating account' | awk '{ print $3 }')
 echo "Created token account dave $account4"
 
-sleep infinity
+fg
