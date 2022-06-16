@@ -2,9 +2,18 @@
 
 This repo provides a Dockerfile that sets up a local Solana cluster with some pre-defined accounts created.
 
-## keys/mint.json
+## keys/mint-mog.json
 
 ### [`MoGaMuJnB3k8zXjBYBnHxHG47vWcW3nyb7bFYvdVzek`](https://explorer.solana.com/address/MoGaMuJnB3k8zXjBYBnHxHG47vWcW3nyb7bFYvdVzek?cluster=custom&customUrl=http%3A%2F%2Flocalhost%3A8899)
+
+## keys/mint-usd.json
+
+### [`USDzo281m7rjzeZyxevkzL1vr5Cibb9ek3ynyAjXjUM`](https://explorer.solana.com/address/USDzo281m7rjzeZyxevkzL1vr5Cibb9ek3ynyAjXjUM?cluster=custom&customUrl=http%3A%2F%2Flocalhost%3A8899)
+
+## keys/mint-eur.json
+
+### [`EURuPGeii6cp54mSpicU3ChPGanijr8QU3FqVbLq5PN5`](https://explorer.solana.com/address/EURuPGeii6cp54mSpicU3ChPGanijr8QU3FqVbLq5PN5?cluster=custom&customUrl=http%3A%2F%2Flocalhost%3A8899)
+
 
 ## keys/owner.json
 
