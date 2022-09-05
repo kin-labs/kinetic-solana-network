@@ -3,7 +3,7 @@
 set -x
 set -m
 
-solana-test-validator &
+solana-test-validator --ledger /tmp/test-ledger &
 
 sleep 5
 
