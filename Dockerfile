@@ -4,8 +4,6 @@ LABEL org.opencontainers.image.source = https://github.com/kin-labs/kinetic-sola
 
 EXPOSE 8899 8900
 
-COPY keys/* .
+COPY . .
 
-COPY setup-localnet.sh .
-
-ENTRYPOINT ./setup-localnet.sh
+ENTRYPOINT ./start-ledger.sh
